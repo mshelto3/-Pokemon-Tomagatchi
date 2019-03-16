@@ -1,1 +1,1 @@
-# cs444-prog4
+Essentially Pokemon Tomagatchi. You start with an egg and you have a 1/3 chance to get one of the original starters. The pokemon has 3 stats: Hunger, Age and Happiness. You can play a minigame to catch falling pokeballs to increase happiness and lower hunger. If hunger goes over 100 or happiness goes under 0, the pokemon passes. If the pokemon's age passes 1000, then they evolve into their next evolution. Figuring out how to animate every pokemon took the longer time. Each pokemon moves in an animation while you're at the pet screen at every evolution.
