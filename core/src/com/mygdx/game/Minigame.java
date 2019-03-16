@@ -89,6 +89,8 @@ public class Minigame implements Screen {
                 if(hud.getMiss() > 2){
                     hud2.setHappy(hud.getPokeHit()+hud2.getHappy());
                     if(hud2.getHappy() > 100) hud2.setHappy(100);
+                    hud2.setHunger(hud2.getHunger()-hud.getPokeHit());
+                    if(hud2.getHunger() < 0) hud2.setHunger(0);
                     game.setScreen(new MainScreen(game, poke));
                     pokeMusic.stop();
                     dispose();

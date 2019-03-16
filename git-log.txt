@@ -1,0 +1,159 @@
+commit 6d5b32781cd64a6f2a3f7bffc761bec10f3cb98a
+Author: Marc Shelton <mshelto3@binghamton.edu>
+Date:   Fri Mar 15 20:41:26 2019 -0400
+
+    done
+
+ android/AndroidManifest.xml                        |   2 +
+ android/assets/Canalave City.mp3                   | Bin 0 -> 43183053 bytes
+ android/assets/Pokemon Hollow.ttf                  | Bin 0 -> 42828 bytes
+ android/assets/Pokemon Solid.ttf                   | Bin 0 -> 25548 bytes
+ android/assets/Verdanturf Town.mp3                 | Bin 0 -> 22322919 bytes
+ android/assets/background.png                      | Bin 0 -> 348941 bytes
+ android/assets/badlogic.jpg                        | Bin 68465 -> 0 bytes
+ android/assets/bg.png                              | Bin 0 -> 9385 bytes
+ android/assets/blastoise.gif                       | Bin 0 -> 374945 bytes
+ android/assets/bulbasaur.gif                       | Bin 0 -> 86386 bytes
+ android/assets/charizard.gif                       | Bin 0 -> 218675 bytes
+ android/assets/charmander.gif                      | Bin 0 -> 144114 bytes
+ android/assets/charmeleon.gif                      | Bin 0 -> 142642 bytes
+ android/assets/death.png                           | Bin 0 -> 76416 bytes
+ android/assets/download.png                        | Bin 0 -> 852056 bytes
+ android/assets/egg.gif                             | Bin 0 -> 59862 bytes
+ android/assets/ivysaur.gif                         | Bin 0 -> 141422 bytes
+ android/assets/minigame.png                        | Bin 0 -> 24094 bytes
+ android/assets/pikachu.png                         | Bin 0 -> 3284 bytes
+ android/assets/pikachuu.png                        | Bin 0 -> 3072 bytes
+ android/assets/pokeEgg.png                         | Bin 0 -> 38352 bytes
+ android/assets/pokeball.png                        | Bin 0 -> 286 bytes
+ android/assets/sad.mp3                             | Bin 0 -> 2426390 bytes
+ android/assets/squirtle.gif                        | Bin 0 -> 61367 bytes
+ android/assets/venusaur.gif                        | Bin 0 -> 285411 bytes
+ android/assets/wartortle.gif                       | Bin 0 -> 91485 bytes
+ android/build.gradle                               |   4 +-
+ android/res/values/strings.xml                     |   2 +-
+ build.gradle                                       |  42 +-
+ core/src/com/mygdx/game/GameOver.java              | 106 +++
+ core/src/com/mygdx/game/GifDecoder.java            | 738 +++++++++++++++++++++
+ core/src/com/mygdx/game/HUD.java                   | 120 ++++
+ core/src/com/mygdx/game/HUD2.java                  |  80 +++
+ core/src/com/mygdx/game/MainScreen.java            | 144 ++++
+ core/src/com/mygdx/game/Minigame.java              | 152 +++++
+ core/src/com/mygdx/game/RaiseEmUp.java             |  21 +-
+ core/src/com/mygdx/game/StartMenu.java             | 113 ++++
+ gradle/wrapper/gradle-wrapper.properties           |   4 +-
+ html/src/com/mygdx/game/GdxDefinition.gwt.xml      |   3 +-
+ .../com/mygdx/game/GdxDefinitionSuperdev.gwt.xml   |   3 +-
+ html/webapp/index.html                             |   2 +-
+ ios/robovm.properties                              |   2 +-
+ 42 files changed, 1496 insertions(+), 42 deletions(-)
+
+commit 730c7176e17b09d447b1bdd9f754f6c6fcd70a32
+Author: Marc Shelton <mshelto3@binghamton.edu>
+Date:   Wed Mar 13 23:24:30 2019 -0400
+
+    lol
+
+ android/res/values/strings.xml                     |  2 +-
+ android/src/com/mygdx/game/AndroidLauncher.java    |  4 +--
+ build.gradle                                       | 36 +++++++++-------------
+ .../{Raise_'Em_Up.gwt.xml => RaiseEmUp.gwt.xml}    |  0
+ .../game/{Raise_'Em_Up.java => RaiseEmUp.java}     |  2 +-
+ .../com/mygdx/game/desktop/DesktopLauncher.java    |  4 +--
+ html/src/com/mygdx/game/GdxDefinition.gwt.xml      |  5 ++-
+ .../com/mygdx/game/GdxDefinitionSuperdev.gwt.xml   |  3 +-
+ html/src/com/mygdx/game/client/HtmlLauncher.java   |  4 +--
+ html/webapp/index.html                             |  2 +-
+ ios/robovm.properties                              |  2 +-
+ ios/src/com/mygdx/game/IOSLauncher.java            |  4 +--
+ 12 files changed, 29 insertions(+), 39 deletions(-)
+
+commit 0b045e267140ca168768fc7a4dea6e009ac73551
+Author: Marc Shelton <mshelto3@binghamton.edu>
+Date:   Wed Mar 13 23:08:14 2019 -0400
+
+    first
+
+ .gitignore                                         | 125 +++++++++++++++
+ android/AndroidManifest.xml                        |  24 +++
+ android/assets/badlogic.jpg                        | Bin 0 -> 68465 bytes
+ android/build.gradle                               | 144 +++++++++++++++++
+ android/ic_launcher-web.png                        | Bin 0 -> 22195 bytes
+ android/proguard-rules.pro                         |  45 ++++++
+ android/project.properties                         |   9 ++
+ android/res/drawable-anydpi-v26/ic_launcher.xml    |   6 +
+ .../drawable-anydpi-v26/ic_launcher_foreground.xml |  40 +++++
+ android/res/drawable-hdpi/ic_launcher.png          | Bin 0 -> 16820 bytes
+ android/res/drawable-mdpi/ic_launcher.png          | Bin 0 -> 16124 bytes
+ android/res/drawable-xhdpi/ic_launcher.png         | Bin 0 -> 17915 bytes
+ android/res/drawable-xxhdpi/ic_launcher.png        | Bin 0 -> 18746 bytes
+ android/res/drawable-xxxhdpi/ic_launcher.png       | Bin 0 -> 19448 bytes
+ android/res/values/color.xml                       |   4 +
+ android/res/values/strings.xml                     |   6 +
+ android/res/values/styles.xml                      |  12 ++
+ android/src/com/mygdx/game/AndroidLauncher.java    |  16 ++
+ build.gradle                                       | 162 +++++++++++++++++++
+ core/build.gradle                                  |  11 ++
+ core/src/Raise_'Em_Up.gwt.xml                      |   5 +
+ core/src/com/mygdx/game/Raise_'Em_Up.java          |  33 ++++
+ desktop/build.gradle                               |  55 +++++++
+ .../com/mygdx/game/desktop/DesktopLauncher.java    |  12 ++
+ gradle.properties                                  |   3 +
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54208 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ html/build.gradle                                  |  85 ++++++++++
+ html/src/com/mygdx/game/GdxDefinition.gwt.xml      |  15 ++
+ .../com/mygdx/game/GdxDefinitionSuperdev.gwt.xml   |  18 +++
+ html/src/com/mygdx/game/client/HtmlLauncher.java   |  51 ++++++
+ html/webapp/WEB-INF/web.xml                        |   3 +
+ html/webapp/index.html                             |  37 +++++
+ html/webapp/refresh.png                            | Bin 0 -> 2971 bytes
+ html/webapp/soundmanager2-jsmin.js                 | 113 ++++++++++++++
+ html/webapp/soundmanager2-setup.js                 |   1 +
+ html/webapp/styles.css                             |  43 ++++++
+ ios/Info.plist.xml                                 |  50 ++++++
+ ios/build.gradle                                   |  22 +++
+ ios/data/Default-1024w-1366h@2x~ipad.png           | Bin 0 -> 106582 bytes
+ ios/data/Default-375w-667h@2x.png                  | Bin 0 -> 98595 bytes
+ ios/data/Default-414w-736h@3x.png                  | Bin 0 -> 110696 bytes
+ ios/data/Default-568h@2x.png                       | Bin 0 -> 84382 bytes
+ ios/data/Default.png                               | Bin 0 -> 29751 bytes
+ ios/data/Default@2x.png                            | Bin 0 -> 85109 bytes
+ ios/data/Default@2x~ipad.png                       | Bin 0 -> 97633 bytes
+ ios/data/Default~ipad.png                          | Bin 0 -> 34134 bytes
+ .../AppIcon.appiconset/Contents.json               | 116 ++++++++++++++
+ .../AppIcon.appiconset/app-store-icon-1024@1x.png  | Bin 0 -> 14555 bytes
+ .../AppIcon.appiconset/ipad-app-icon-76@1x.png     | Bin 0 -> 1385 bytes
+ .../AppIcon.appiconset/ipad-app-icon-76@2x.png     | Bin 0 -> 2318 bytes
+ .../ipad-notifications-icon-20@1x.png              | Bin 0 -> 379 bytes
+ .../ipad-notifications-icon-20@2x.png              | Bin 0 -> 793 bytes
+ .../ipad-pro-app-icon-83.5@2x.png                  | Bin 0 -> 2444 bytes
+ .../ipad-settings-icon-29@1x.png                   | Bin 0 -> 623 bytes
+ .../ipad-settings-icon-29@2x.png                   | Bin 0 -> 1102 bytes
+ .../ipad-spotlight-icon-40@1x.png                  | Bin 0 -> 793 bytes
+ .../ipad-spotlight-icon-40@2x.png                  | Bin 0 -> 1462 bytes
+ .../AppIcon.appiconset/iphone-app-icon-60@2x.png   | Bin 0 -> 1952 bytes
+ .../AppIcon.appiconset/iphone-app-icon-60@3x.png   | Bin 0 -> 2564 bytes
+ .../iphone-notification-icon-20@2x.png             | Bin 0 -> 793 bytes
+ .../iphone-notification-icon-20@3x.png             | Bin 0 -> 1119 bytes
+ .../iphone-spotlight-icon-40@2x.png                | Bin 0 -> 1462 bytes
+ .../iphone-spotlight-icon-40@3x.png                | Bin 0 -> 1952 bytes
+ .../iphone-spotlight-settings-icon-29@2x.png       | Bin 0 -> 1102 bytes
+ .../iphone-spotlight-settings-icon-29@3x.png       | Bin 0 -> 1530 bytes
+ ios/data/Media.xcassets/Contents.json              |   6 +
+ ios/robovm.properties                              |   6 +
+ ios/robovm.xml                                     |  47 ++++++
+ ios/src/com/mygdx/game/IOSLauncher.java            |  22 +++
+ settings.gradle                                    |   1 +
+ 73 files changed, 1610 insertions(+)
+
+commit cc43502ad9f8500755b7faafad0a2756dae9b248
+Author: Marc Shelton <31292284+mshelto3@users.noreply.github.com>
+Date:   Wed Mar 13 15:17:48 2019 -0400
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)

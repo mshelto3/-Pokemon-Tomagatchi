@@ -73,17 +73,18 @@ public class MainScreen implements Screen {
         updatePoke();
         helper+= Gdx.graphics.getDeltaTime();
         System.out.println(helper);
-        if(helper > 0) {
+        if(helper > 2) {
             hud.incAge();
             hud.incHunger();
             hud.decrementHappy();
             helper = 0;
         }
-        if(hud.getAge() == 100){
+        if(hud.getAge() == 1000){
             evolvePokemon();
             hud.setAge(0);
         }
         if(hud.getHappy() < 0) game.setScreen(new GameOver(game));
+        if(hud.getHunger() > 100) game.setScreen(new GameOver(game));
         elapsed += Gdx.graphics.getDeltaTime();
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
